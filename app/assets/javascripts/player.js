@@ -1,7 +1,7 @@
 (function () {
 
   var
-    AUDIO_FILE        = 'https://ec-media.soundcloud.com/2THCyunoxvsb.128.mp3?ff61182e3c2ecefa438cd02102d0e385713f0c1faf3b0339595665f90f06ef13e2092c86ddd6ed7bd805a2c0c90d1b2018e441276ed9ef385a9f4c573d25164d9e1299dd23&AWSAccessKeyId=AKIAJ4IAZE5EOI7PA7VQ&Expires=1363034795&Signature=BuGRMGdn1DXU%2BvdJ2YD5EIiGlUs%3D',
+    AUDIO_FILE        = 'http://api.soundcloud.com/tracks/293/stream?client_id=f9ff75bc0f32c5f581a5abe204de3555',
     PARTICLE_COUNT    = 250,
     MAX_PARTICLE_SIZE = 12,
     MIN_PARTICLE_SIZE = 2,
@@ -140,28 +140,8 @@
   }
 
   function loaded () {
-    var
-      loading = document.getElementById( 'loading' ),
-      anchor  = document.createElement('A'),
-      supported = Dancer.isSupported(),
-      p;
-
-    anchor.appendChild( document.createTextNode( supported ? 'Play!' : 'Close' ) );
-    anchor.setAttribute( 'href', '#' );
-    loading.innerHTML = '';
-    loading.appendChild( anchor );
-
-    if ( !supported ) {
-      p = document.createElement('P');
-      p.appendChild( document.createTextNode( 'Your browser does not currently support either Web Audio API or Audio Data API. The audio may play, but the visualizers will not move to the music; check out the latest Chrome or Firefox browsers!' ) );
-      loading.appendChild( p );
-    }
-
-    anchor.addEventListener( 'click', function () {
-      dancer.play();
-      document.getElementById('loading').style.display = 'none';
-    }, false );
-
+    
+    // do nothing here
   }
 
   on();

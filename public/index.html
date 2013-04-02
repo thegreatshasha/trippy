@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'>
+		<!--link href='assets/css.css' rel='stylesheet' type='text/css'>
 		<link href='assets/dancer.css' rel='stylesheet' type='text/css'>
-	</head>
+		<link rel="stylesheet" href="assets/jquery-ui.css" /-->
+  	</head>
 	<body>
 		<div id="info">
-			<h1>dancer.js</h1>
-			<h2>JavaScript Audio Library</h2>
+			<h1>Trippy</h1>
+			<h2>Lets go for a spin</h2>
 			<a id="togglefft" href="#">toggle FFT spectrum</a>
 			<canvas id="fft" height="50" width="256"></canvas>
 			<ul>
-				<li><a href="https://github.com/jsantell/dancer.js" title="dancer.js on github">view API/source</a></li>
-				<li>by <a href="http://jsantell.com" title="Jordan Santell">jordan santell</a></li>
+				<li><a href="https://dinasource.com" title="Enjoy!!!">Enjoy your ride</a></li>
+				<li>by <a href="http://dinasource.com" title="Shashwat">Shashwat</a></li>
 			</ul>
 		</div>
 		<div id="songinfo">
 			<span>Now playing...</span>
-			<h3><a href="http://zirconstudios.bandcamp.com/album/unearthed" title="Zircon Studios Bandcamp">Zircon - Devil's Spirit</a></h3>
+			<h3><a href="http://zirconstudios.bandcamp.com/album/unearthed" title="" id="now_playing">Nothing</a></h3>
 		</div>
-		<div id="loading">Loading . . .</div>
+		<div id="loading">
+			<div class="ui-widget">
+			  <input id="musix" placeholder="Search music"/>
+			</div>
+		</div>
+
 		<!-- Demo dependencies -->
 		<script src="assets/Three.js"></script>
 		<script src="assets/Stats.js"></script>
 		<script src="assets/Detector.js"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  		<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  
+
 
 		<!-- Dancer.js -->
 		<script src="assets/dancer.js"></script>
@@ -39,6 +49,7 @@
 		<!-- Demo stuff -->
 		<script src="assets/scene.js"></script>
 		<script src="assets/player.js"></script>
+		<script src="assets/soundstream.js"></script>
 		<script>
 			(function () {
 				var fft = document.getElementById( 'fft' ),

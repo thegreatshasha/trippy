@@ -10,6 +10,20 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
+//= require jquery-1.9.1
+//= require jquery-ui-1.10.1
+//= require Three
+//= require Stats
+//= require Detector
+//= require dancer
+//= require support
+//= require kick
+//= require adapterWebkit
+//= require adapterMoz
+//= require adapterFlash
+//= require fft
+//= require flash_detect
+//= require dancer.fft
+//= require scene
+//= require player
+//= require soundstream
