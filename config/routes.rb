@@ -1,6 +1,6 @@
 Rocker::Application.routes.draw do
   get "party/index"
-
+  root :to => 'party#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
