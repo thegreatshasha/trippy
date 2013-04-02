@@ -38,4 +38,6 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 # Because js runtime is not found on all systems
-gem 'therubyracer'
+#gem 'therubyracer'
+gem 'libv8', '3.11.8.0'
+gem 'execjs'

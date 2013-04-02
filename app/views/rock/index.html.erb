@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='assets/css.css' rel='stylesheet' type='text/css'>
+		<link href='assets/dancer.css' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="assets/jquery-ui.css" />
+  	</head>
+	<body>
+		<div id="info">
+			<h1>Trippy</h1>
+			<h2>Lets go for a spin</h2>
+			<a id="togglefft" href="#">toggle FFT spectrum</a>
+			<canvas id="fft" height="50" width="256"></canvas>
+			<ul>
+				<li><a href="https://dinasource.com" title="Enjoy!!!">Enjoy your ride</a></li>
+				<li>by <a href="http://dinasource.com" title="Shashwat">Shashwat</a></li>
+			</ul>
+		</div>
+		<div id="songinfo">
+			<span>Now playing...</span>
+			<h3><a href="http://zirconstudios.bandcamp.com/album/unearthed" title="" id="now_playing">Nothing</a></h3>
+		</div>
+		<div id="loading">
+			<div class="ui-widget">
+			  <input id="musix" placeholder="Search music"/>
+			</div>
+		</div>
+
+		<!-- Demo dependencies -->
+		<script src="assets/Three.js"></script>
+		<script src="assets/Stats.js"></script>
+		<script src="assets/Detector.js"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  		<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  
+
+
+		<!-- Dancer.js -->
+		<script src="assets/dancer.js"></script>
+		<script src="assets/support.js"></script>
+		<script src="assets/kick.js"></script>
+		<script src="assets/adapterWebkit.js"></script>
+		<script src="assets/adapterMoz.js"></script>
+		<script src="assets/adapterFlash.js"></script>
+		<script src="assets/fft.js"></script>
+		<script src="assets/flash_detect.js"></script>
+		<script src="assets/dancer.fft.js"></script>
+
+		<!-- Demo stuff -->
+		<script src="assets/scene.js"></script>
+		<script src="assets/player.js"></script>
+		<script src="assets/soundstream.js"></script>
+		<script>
+			(function () {
+				var fft = document.getElementById( 'fft' ),
+					toggle = document.getElementById( 'togglefft' );
+				toggle.addEventListener( 'click', function ( e ) {
+					e.preventDefault();
+					fft.style.display = fft.style.display == 'block' ? 'none' : 'block';
+				}, true );
+
+				// Due to requiring loading message to float above the rest (absolute)
+				// But still wanting it centered;
+				var loading = document.getElementById('loading');
+				loading.style.marginLeft = (( window.outerWidth - 500 ) / 2) + 'px';
+			})();
+		</script>
+	</body>
+</html>

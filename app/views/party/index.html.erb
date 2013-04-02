@@ -1,0 +1,38 @@
+		<div id="info">
+			<h1>Trippy</h1>
+			<h2>Lets go for a spin</h2>
+			<a id="togglefft" href="#">toggle FFT spectrum</a>
+			<canvas id="fft" height="50" width="256"></canvas>
+			<ul>
+				<li><a href="https://dinasource.com" title="Enjoy!!!">Enjoy your ride</a></li>
+				<li>by <a href="http://dinasource.com" title="Shashwat">Shashwat</a></li>
+			</ul>
+		</div>
+		
+		<div id="songinfo">
+			<span>Now playing...</span>
+			<h3><a href="http://zirconstudios.bandcamp.com/album/unearthed" title="" id="now_playing">Nothing</a></h3>
+		</div>
+		
+		<div id="loading">
+			<div class="ui-widget">
+			  <input id="musix" placeholder="Search music"/>
+			</div>
+		</div>
+
+		<!-- Some demo specific javascript -->
+		<script>
+			(function () {
+				var fft = document.getElementById( 'fft' ),
+					toggle = document.getElementById( 'togglefft' );
+				toggle.addEventListener( 'click', function ( e ) {
+					e.preventDefault();
+					fft.style.display = fft.style.display == 'block' ? 'none' : 'block';
+				}, true );
+
+				// Due to requiring loading message to float above the rest (absolute)
+				// But still wanting it centered;
+				var loading = document.getElementById('loading');
+				loading.style.marginLeft = (( window.outerWidth - 500 ) / 2) + 'px';
+			})();
+		</script>
